@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>学习vue 第一天</title>
+</head>
+
+<body>
+    <ul id="app">
+        <li v-for="itme in ofo">{{itme}}</li>
+    </ul>
+</body>
+
+</html>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    // 循环列表
+    const app = new Vue({
+        el: '#app',
+        data: {
+            ofo: ['小明', '小马', '小刘']
+        }
+    })
+</script>
