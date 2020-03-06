@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+          <h2>当前数字: {{number}}</h2>
+           <!-- 简写 -->
+          <!-- <button v-on:click="number++">+</button> -->
+          <!-- <button v-on:click="number--">-</button> -->
+          <button v-on:click="add">+</button>
+          <button v-on:click="sub">-</button>
+    </div>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    // v-on:click 简写: @click 也叫做语法糖
+    const   app = new Vue({
+        el : "#app",
+        data: {
+            number : 0 
+        },
+        methods: {
+                add: function  () {
+                        // this.number 表示 当前 app 对象里的找 number
+                        console.log('加被执行了');
+                        this.number++
+                },
+                sub: function () {
+                    console.log('减被执行了');
+                    this.number--
+                }
+        }
+    })
+</script>
