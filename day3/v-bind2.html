@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动态绑定 对象语法class可以写对象</title>
+</head>
+<style >
+        .active {
+            color: red;
+        }
+</style>
+<body>
+    <div id="app">
+        <h2 v-bind:class="{active: isActive, line: isLine}">{{message}}</h2>
+        <button v-on:click="aaa">点击</button>
+    </div>
+    
+</body>
+
+</html>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            message: "哈哈哈哈哈",
+            isActive: true,
+            isLine: true,
+        },
+        methods: {
+            aaa: function () {
+                this.isActive = !this.isActive
+            }
+        },
+    })
+</script>

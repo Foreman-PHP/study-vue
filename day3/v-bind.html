@@ -3,22 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>解析html代码并且显示</title>
+    <title>v-bind 动态解析</title>
 </head>
-
 <body>
     <div id="app">
-        <h2 v-html='url'></h2>
+        <img v-bind:src="url" alt="">
     </div>
 </body>
-
 </html>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script>
-    const app = new Vue({
+    new Vue({
         el: "#app",
         data: {
-            url: '<a href="www.baidu.com">百度一下</a>'
+            url: "https://i0.hdslb.com/bfs/bangumi/18f791db905a11168800660c849c9e514dafd703.jpg@110w_144h_100Q_1c.webp"
         }
     })
 </script>
