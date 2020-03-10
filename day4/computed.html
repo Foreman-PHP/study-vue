@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>computed  计算属性</title>
+</head>
+
+<body>
+        <div id="app">
+                <h3>{{fullName}}</h3>
+        </div>
+</body>
+
+</html>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+new Vue({
+    el: "#app",
+    data: {
+        fistName: '雯雯',
+        lastName: '演员'
+    },
+    computed: {
+        fullName: {
+                get: function () {
+                        return this.fistName + '      ' + this.lastName
+                }
+        }
+    }
+})
+</script>
+
+<script>
+// ES5 写法
+const obj = {
+        run: function () {
+
+        }
+}
+// ES6 写法
+const obj = {
+        run () {
+
+        }
+}
+</script>
