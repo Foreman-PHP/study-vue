@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+  <div id="app">
+    <a v-bind:href="url">百度一下</a>
+
+    <!--语法糖-->
+    <a :href="url">百度一下</a>
+  </div>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+  new Vue({
+      el: "#app",
+      data: {
+        url: "www.baidu.com",
+      }
+  })
+</script>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+  <div id="app">
+  <!--  某些情况下，我们从服务器请求到的数据本身就是一个 HTML 代码，如果我们直接通过 {{}} 来输出，会将 HTML 代码也一起输出，
+        但如果希望按照 HTML 格式进行解析，并且显示对应的内容，可以使用 v-html 指令v-html 指令后面往往会跟上一个 string 类型，
+        会将 string 的 html 解析出来并且进行渲染
+        -->
+    <h3>{{url}}</h3>
+    <h3 v-html="url"></h3>
+  </div>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+  const app = new Vue({
+      el: "#app",
+      data: {
+         url: '<a href="www.baidu.com">百度一下</a>'
+      }
+  })
+</script>

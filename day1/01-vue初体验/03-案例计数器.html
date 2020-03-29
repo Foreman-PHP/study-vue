@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+  <div id="app">
+    <h2>当前数字: {{num}}</h2>
+    <!-- @click 是 v-on:click 的语法糖-->
+    <button @click="add">+</button>
+    <button @click="sub">-</button>
+  </div>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+  new Vue({
+      el: "#app",
+      data: {
+        num: 0,
+      },
+      methods: {
+          add() {
+            this.num++
+          },
+          sub() {
+            this.num--
+          }
+      }
+  })
+</script>

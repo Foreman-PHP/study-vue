@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+  <div id="app">
+    <!--用于跳过这个元素和它子元素的编译过程，显示原本的 Mustache 语法，将代码原封不动的解析出来-->
+    <h3 v-pre="name">{{name}}</h3>
+    <h3>{{name}}</h3>
+  </div>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+  const app = new Vue({
+      el: "#app",
+      data: {
+         name: 'hello, vue'
+      }
+  })
+</script>

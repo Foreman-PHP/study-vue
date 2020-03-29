@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+
+  <style>
+    .active {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+<div id="app">
+<!--<h2 :class="{key:value}"></h2>
+    这里key 是类名, value 是布尔值
+-->
+  <h2 :class="getClasses()">{{message}}</h2>
+  <button @click="btnClick">按钮</button>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+  const app = new Vue({
+    el: '#app',
+    data: {
+      message: 'hello, vue',
+      isActive: true,
+    },
+    methods: {
+      btnClick() {
+         this.isActive = !this.isActive
+      },
+      getClasses() {
+         return {active: this.isActive}
+      }
+    }
+  })
+</script>
+
+</body>
+</html>
