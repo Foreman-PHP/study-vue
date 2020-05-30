@@ -3,10 +3,14 @@
   "version": "1.0.0",
   "description": "学习vue, webpack",
   "main": "webpack.config.js",
-  "dependencies": {},
+  "dependencies": {
+    "vue": "^2.6.11"
+  },
   "devDependencies": {
     "css-loader": "^3.5.3",
+    "file-loader": "^6.0.0",
     "style-loader": "^1.2.1",
+    "url-loader": "^4.1.0",
     "webpack": "^3.6.0"
   },
   "scripts": {

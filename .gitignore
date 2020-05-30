@@ -2,5 +2,7 @@
 /.vscode
 .idea
 /.idea
-/day4/webpack/node_modules/
-/day4/webpack/package-lock.json
+node_modules
+package-lock.json
+dist
+dist/*
