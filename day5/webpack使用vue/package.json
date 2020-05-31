@@ -4,12 +4,14 @@
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
-    "dev": "webpack"
+    "build": "webpack",
+    "dev": "webpack-dev-server --open"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "webpack": "^3.6.0"
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.9.1"
   },
   "dependencies": {
     "vue": "^2.6.11"
